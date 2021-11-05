@@ -28,6 +28,12 @@ if(CONFIG_AUDIO_BOARD_CUSTOM)
 	list(APPEND COMPONENT_SRCS ./ma120/ma120.c)
   endif()
 
+  if(CONFIG_DAC_AC101)
+	message(STATUS "Selected DAC is " CONFIG_DAC_AC101)
+	list(APPEND COMPONENT_ADD_INCLUDEDIRS ./ac101/include)
+	list(APPEND COMPONENT_SRCS ./ac101/ac101.c)
+  endif()
+
 endif()
 
 register_component()

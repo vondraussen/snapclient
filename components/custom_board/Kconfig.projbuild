@@ -16,6 +16,9 @@ menu "Custom Audio Board"
         config DAC_MA120X0
             bool "Infineon MA120X0 ClassD AMP"
 
+        config DAC_AC101
+            bool "AI-Thinker ESP32-A1S embedded Codec AC101"
+
 
     endchoice
 
@@ -133,5 +136,9 @@ menu "Custom Audio Board"
              help
                  GPIO number low if clip observed
      endmenu
+
+    menu "AC101 Codec AI-Thinker ESP32-A1S"
+        depends on DAC_AC101
+    endmenu
 
 endmenu
